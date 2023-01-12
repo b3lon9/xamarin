@@ -8,10 +8,11 @@ namespace WindowsFormsApp2
 {
     internal class Cworker1
     {
-        public void send(CWorker2 worker2)
+        // 기능만 가질 수 있도록 Interface를 매개타입으로 받음
+        public void send(IWorker worker)
         {
             // worker2에게 주는것
-            worker2.receive();
+            worker.receive();
         }
     }
 }

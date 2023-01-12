@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp2
 {
-    internal class CWorker2
+    internal class CWorker2:IWorker
     {
         int m_nCount;
 
@@ -31,5 +31,6 @@ namespace WindowsFormsApp2
                 }
             }
         }
+
     }
 }
