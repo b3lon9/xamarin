@@ -12,4 +12,11 @@ namespace WindowsFormsApp2
     {
         void receive();
     }
+
+    public delegate void OnNotify_dele();
+
+    public interface INotify
+    {
+        event OnNotify_dele OnNotify;
+    }
 }

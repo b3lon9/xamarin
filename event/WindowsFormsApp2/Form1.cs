@@ -14,15 +14,18 @@ namespace WindowsFormsApp2
     {
         Cworker1 worker1;
         CWorker2 worker2;
+        CWorker3 worker3;
         public Form1()
         {
             InitializeComponent();
 
             worker1 = new Cworker1();
             worker2 = new CWorker2();
+            worker3 = new CWorker3();
 
             // worker2의 'event'를 만져줌
             worker2.OnFull += new CWorker2.DeleFull(OnFull);
+            worker3.OnNotify += new OnNotify_dele(OnNotify);
         }
 
         void OnFull()
@@ -31,9 +34,15 @@ namespace WindowsFormsApp2
             Console.WriteLine("OnFull..!");
         }
 
+        void OnNotify()
+        {
+            Console.WriteLine("OnNotify...!");
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             worker1.send(worker2 as IWorker);
+            worker3.testc();
         }
     }
 }
