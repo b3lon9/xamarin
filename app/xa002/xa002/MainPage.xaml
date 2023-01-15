@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xa002.MainPage">
+
+    <StackLayout>
+        <Label Text="안녕하세요. xamarin ! " HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button Text="테스트" Clicked="Button_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
