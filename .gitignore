@@ -6,3 +6,10 @@
 bin/
 obj/
 Properties/
+
+# xamarin
+*.png
+*.plist
+*.user
+*.txt
+mipmap*/
