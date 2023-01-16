@@ -13,3 +13,25 @@ Properties/
 *.user
 *.txt
 mipmap*/
+# Awesome project not commit
+AwesomeApp/
+
+# only xaml, cs
+# not .Net Framework
+.vs/
+
+# android
+*.apk
+*.dll
+*.pdb
+obj/
+mipmap*/
+Resources/
+
+# ios
+*.plist
+*.exe
+*.storyboard
+
+*.png
+*.json
