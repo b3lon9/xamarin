@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lec07.AbsoluteEx">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <Label Text="Mint" AbsoluteLayout.LayoutBounds="300, 50, 100, 50" AbsoluteLayout.LayoutFlags="None" Background="#00ffff" />
+            <Label Text="Red" AbsoluteLayout.LayoutBounds="10, 50, 200, 100" Background="#ff0000" />
+            <Label Text="Green" AbsoluteLayout.LayoutBounds="210, 150, 100, 200" Background="#00ff00"/>
+            <Label Text="Blue" AbsoluteLayout.LayoutBounds="110, 350, 100, 150" Background="#0000ff" />
+
+            <Label Text="Yellow-Top" AbsoluteLayout.LayoutBounds=".5, 0, 0.5, 0.05" AbsoluteLayout.LayoutFlags="All" Background="#ffff00" />
+            <Label Text="Yellow-Left" AbsoluteLayout.LayoutBounds="0, .5, 50, 100" AbsoluteLayout.LayoutFlags="PositionProportional" Background="#ffff00" />
+            <Label Text="Yellow-Right" AbsoluteLayout.LayoutBounds="1, .5, 50, 100" AbsoluteLayout.LayoutFlags="PositionProportional" Background="#ffff00" />
+            <Label Text="Yellow-Bottom" AbsoluteLayout.LayoutBounds=".5, 1, 100, 50" AbsoluteLayout.LayoutFlags="PositionProportional" Background="#ffff00" />
+
+            <Label Text="Pink" AbsoluteLayout.LayoutBounds="50, 50, 100, .5" AbsoluteLayout.LayoutFlags="HeightProportional" Background="Pink" />
+            <Label Text="Pink" AbsoluteLayout.LayoutBounds="20, 400, .5, 100" AbsoluteLayout.LayoutFlags="WidthProportional" Background="Pink" />
+            <Label Text="Pink" AbsoluteLayout.LayoutBounds="200, 100, .3, .3" AbsoluteLayout.LayoutFlags="SizeProportional" Background="#ff00ff" />
+            <Label Text="Pink" AbsoluteLayout.LayoutBounds=".5, 10, 100, 50" AbsoluteLayout.LayoutFlags="XProportional" Background="#ff00ff" />
+            <Label Text="Pink" AbsoluteLayout.LayoutBounds="50, 1, 100, 120" AbsoluteLayout.LayoutFlags="YProportional" Background="#ff00ff" />
+            <!--y propotional 일 경우 '1'이면 page의 끝 부분까지 자동으로 당겨지는구나?-->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
