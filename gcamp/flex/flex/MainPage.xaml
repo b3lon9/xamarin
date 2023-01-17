@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="flex.MainPage">
+
+    <FlexLayout 
+        Direction="Column" 
+        AlignItems="Stretch" 
+        JustifyContent="SpaceAround" 
+        BackgroundColor="#cccc00">
+        
+        <Label 
+            Text="label01"
+            x:Name="label01"
+            BackgroundColor="#ff0000"
+            Padding="10"/>
+
+        <Label
+            Text="label02"
+            x:Name="label02"
+            BackgroundColor="#00ff00"
+            Padding="10" />
+
+        <Label
+            Text="label03"
+            x:Name="label03"
+            BackgroundColor="#0000ff"
+            Padding="10" />
+    </FlexLayout>
+
+</ContentPage>
