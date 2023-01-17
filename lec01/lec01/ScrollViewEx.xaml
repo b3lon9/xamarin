@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lec01.ScrollViewEx">
+    <ContentPage.Content>
+        <ScrollView Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal">
+                <Label  
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+
+                <Label 
+                Text="Item01"
+                Background="#ffff00" />
+
+                <Label 
+                Text="Item01"
+                Background="#ffff00" />
+
+                <Label 
+                Text="Item01"
+                Background="#ffff00" />
+
+                <Label 
+                Text="Item01"
+                Background="#ffff00" />
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+                <Label 
+                Text="Item01"
+                Background="#ffff00" 
+                Padding="10" />
+                <!--좌우상하에 적용 됨-->
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

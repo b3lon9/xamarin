@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace lec01
@@ -11,7 +12,9 @@ namespace lec01
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            // MainPage.xaml을 생성하는 것이 아닌 MyPage를 생성함
+            //MainPage = new MyPage();
+            MainPage = new FrameEx();
         }
 
         protected override void OnStart()
