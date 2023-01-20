@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lec01.ContentViewEx"
+             xmlns:local="clr-namespace:lec01">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Background="#00ff00">
+                <local:MyContentsView Name="박찬호" Major="Baseball" Nation="Korea" Gender="Male" Age="42" />
+
+                <local:MyContentsView Name="박찬호" Major="Baseball" Nation="Korea" Gender="Male" Age="42" />
+                <local:MyContentsView Name="류" Major="Baseball" Nation="Korea" Gender="Male" Age="22" />
+                <local:MyContentsView Name="캉호" Major="Baseball" Nation="Korea" Gender="Male" Age="33" />
+                <local:MyContentsView Name="박헤찬호" Major="Baseball" Nation="Korea" Gender="Male" Age="51" />
+                <local:MyContentsView Name="ㅇㅇ호" Major="Baseball" Nation="Korea" Gender="Male" Age="26" />
+                <local:MyContentsView Name="ㄱㄱ호" Major="Baseball" Nation="Korea" Gender="Male" Age="41" />
+                <local:MyContentsView Name="박찬호" Major="Baseball" Nation="Korea" Gender="Male" Age="61" />
+                <local:MyContentsView Name="ㄴㄴ호" Major="Baseball" Nation="Korea" Gender="Male" Age="44" />
+                <local:MyContentsView Name="ㄱㄷ찬호" Major="Baseball" Nation="Korea" Gender="Male" Age="42" />
+                <local:MyContentsView Name="ㄷ호" Major="Baseball" Nation="Korea" Gender="Male" Age="31" />
+                <local:MyContentsView Name="미미찬호" Major="Baseball" Nation="Korea" Gender="Male" Age="42" />
+                <local:MyContentsView Name="코코호" Major="Baseball" Nation="Korea" Gender="Male" Age="36" />
+                <local:MyContentsView Name="카리리" Major="Baseball" Nation="Korea" Gender="Male" Age="55" />
+                <local:MyContentsView Name="ㅂ제" Major="Baseball" Nation="Korea" Gender="Male" Age="41" />
+                <local:MyContentsView Name="븦ㅍ" Major="Baseball" Nation="Korea" Gender="Male" Age="53" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

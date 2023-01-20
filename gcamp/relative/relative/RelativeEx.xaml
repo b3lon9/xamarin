@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="relative.RelativeEx">
+    <ContentPage.Content>
+        <RelativeLayout Background="#0000ff">
+            <Label x:Name="grayLabel" Text="Wrap" BackgroundColor="#cccccc"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.1, Constant=0}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.8, Constant=0}" />
+            <!--Constant 무엇을 나타내는 것일까 : Factor 담아낸 값에 미세조정이 필요한 경우 Constant를 사용함-->
+
+            <Label x:Name="redLabel" Text="Wrap" Background="#ff0000"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.2, Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.2, Constant=0}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=grayLabel, Property=Width, Factor=.5, Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=grayLabel, Property=Height, Factor=.5, Constant=0}" />
+
+            <Label Text="Green" BackgroundColor="#00ff00"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=redLabel, Property=X, Factor=1,Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=redLabel, Property=Y, Factor=1,Constant=270}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView, ElementName=redLabel, Property=Width, Factor=1,Constant=0}"
+                   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=redLabel, Property=Height, Factor=0.2, Constant=0}" />
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>
