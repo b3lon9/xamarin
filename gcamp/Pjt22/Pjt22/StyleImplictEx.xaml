@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pjt22.StyleImplictEx">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+<!--x:Key 값을 넣지 않음 Implicit-->
+            <Style 
+                TargetType="Entry">
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value="Yellow" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="0, 20, 0, 0">
+            <Entry Text="These entries" />
+            <Entry Text="are demonstrating" />
+            <Entry Text="implicit styles, " />
+            <Entry 
+                Text="and an implict style override" 
+                BackgroundColor="Lime"
+                TextColor="Red" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

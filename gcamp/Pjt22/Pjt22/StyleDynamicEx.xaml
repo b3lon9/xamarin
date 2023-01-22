@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pjt22.StyleDynamicEx">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style 
+                x:Key="baseStyle"
+                TargetType="View">
+                <Setter 
+                    Property="VerticalOptions"
+                    Value="CenterAndExpand" />
+            </Style>
+
+            <Style
+                x:Key="blueSearchBarStyle"
+                TargetType="SearchBar"
+                BasedOn="{StaticResource baseStyle}">
+                <Setter 
+                    Property="FontAttributes"
+                    Value="Italic" />
+                <Setter
+                    Property="PlaceholderColor"
+                    Value="Blue" />
+            </Style>
+            <Style
+                x:Key="greenSearchBarStyle"
+                TargetType="SearchBar">
+                <Setter 
+                    Property="FontAttributes"
+                    Value="None" />
+                <Setter
+                    Property="PlaceholderColor"
+                    Value="Green" />
+            </Style>
+            <Style
+                x:Key="buttonStyle"
+                TargetType="Button"
+                BasedOn="{StaticResource baseStyle}" >
+                <Setter
+                    Property="FontSize"
+                    Value="Large" />
+                <Setter
+                    Property="TextColor"
+                    Value="Red" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout 
+            Orientation="Vertical"
+            Padding="0, 20, 0, 0">
+            <SearchBar
+                Placeholder="These SearchBar controls"
+                Style="{DynamicResource searchBarStyle}"/>
+            <SearchBar 
+                Placeholder="are demon strating" 
+                Style="{DynamicResource searchBarStyle}"/>
+            <SearchBar 
+                Placeholder="dynamic styles" 
+                Style="{DynamicResource searchBarStyle}"/>
+            <SearchBar 
+                Placeholder="but this not dynamic" 
+                Style="{StaticResource blueSearchBarStyle}"/>
+            <Button 
+                Text="Change Style"
+                Clicked="onButtonClicked" 
+                Style="{StaticResource buttonStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
