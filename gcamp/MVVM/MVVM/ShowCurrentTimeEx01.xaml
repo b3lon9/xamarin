@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="MVVM.ShowCurrentTimeEx01"
+             Padding="20">
+
+    
+    
+    <StackLayout>
+        <StackLayout>
+            <Label
+                Text="{Binding Source={x:Static sys:DateTime.Now}}"
+                FontSize="30"
+                HorizontalTextAlignment="Center" />
+            
+        </StackLayout>
+        
+        <StackLayout 
+            BindingContext="{x:Static sys:DateTime.Now}">
+            <Label
+                Text="{Binding Year, StringFormat='The Year is {0}'}"
+                FontSize="30"
+                HorizontalTextAlignment="Center" />
+            <Label
+                Text="{Binding StringFormat='The Month is {0:MMMM}'}"
+                FontSize="30"
+                HorizontalTextAlignment="Center" />
+            <Label
+                Text="{Binding Day, StringFormat='The Day is {0}'}"
+                FontSize="30"
+                HorizontalTextAlignment="Center" />
+            <Label
+                Text="{Binding StringFormat='The Time is {0:T}'}"
+                FontSize="30"
+                HorizontalTextAlignment="Center" />
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
