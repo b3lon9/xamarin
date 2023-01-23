@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.ColorChangeEx01"
+             xmlns:local="clr-namespace:MVVM.ViewModel"
+             Padding="20"
+             BackgroundColor="#777">
+    <ContentPage.BindingContext>
+        <local:ColorChangeViewModel CurrentColor="Aqua" />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView
+                Color="{Binding CurrentColor}"
+                VerticalOptions="FillAndExpand" />
+
+            <Label
+                Text="{Binding Hue, StringFormat='Hue = {0:F2}'}"
+                HorizontalOptions="Center" />
+
+            <Slider
+                Value="{Binding Hue, Mode=TwoWay}" />
+
+            
+            <Label
+                Text="{Binding Saturation, StringFormat='Saturation = {0:F2}'}"
+                HorizontalOptions="Center" />
+            <Slider
+                Value="{Binding Saturation, Mode=TwoWay}" />
+
+
+            <Label
+                Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}"
+                HorizontalOptions="Center" />
+            <Slider 
+                Value="{Binding Luminosity, Mode=TwoWay}"/>
+
+            
+            <Label
+                Text="{Binding Alpha, StringFormat='Alpha = {0:F2}'}"
+                HorizontalOptions="Center" />
+            <Slider
+                Value="{Binding Alpha, Mode=TwoWay}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
