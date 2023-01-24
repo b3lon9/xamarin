@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MVVM.TemperatureControllerEx"
+             xmlns:local="clr-namespace:MVVM.ViewModel"
+             Padding="20"
+             BackgroundColor="#777">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:TemperatureViewModel
+                x:Key="temperatureViewModel" />
+            <Style 
+                x:Key="btn"
+                TargetType="Button">
+                <Setter
+                    Property="FontAttributes"
+                    Value="Bold" />
+                <Setter
+                    Property="VerticalOptions"
+                    Value="Center" />
+                <Setter
+                    Property="HorizontalOptions"
+                    Value="FillAndExpand" />
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout
+            Orientation="Vertical"
+            BindingContext="{StaticResource temperatureViewModel}">
+            <StackLayout 
+                Padding="5"
+                Margin="0, 30, 0, 0">
+                <Label
+                    Text="Device #01 : Enter the temperature you want."
+                    TextColor="#fff"
+                    FontSize="17" />
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal">
+                
+                <Button
+                    Text="-"
+                    Style="{StaticResource btn}"
+                    Command="{Binding Path=DecreaseCommandForDev01Temp}"/>
+                
+                <Label
+                    Text="{Binding Path=Dev01Temp}"
+                    TextColor="#f00"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="20"
+                    BackgroundColor="#fff" />
+                
+                <Button
+                    Text="+"
+                    Style="{StaticResource btn}"
+                    Command="{Binding Path=IncreaseCommandForDev01Temp}"/>
+
+                <Button
+                    Text="Enter"
+                    Style="{StaticResource btn}"/>
+
+            </StackLayout>
+
+            <StackLayout
+                Padding="5"
+                Margin="0, 30, 0, 0" >
+                <Label
+                    Text="Device #02 :Enter the temperature you want."
+                    TextColor="#fff"
+                    FontSize="17"/>
+            </StackLayout>
+
+            <StackLayout
+                Orientation="Horizontal">
+
+                <Button
+                    Text="-"
+                    Style="{StaticResource btn}"
+                    Command="{Binding Path=DecreaseCommandForDev02Temp}"/>
+
+                <Label
+                    Text="{Binding Path=Dev02Temp}"
+                    TextColor="#f00"
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    FontSize="20"
+                    BackgroundColor="#fff" />
+
+                <Button
+                    Text="+"
+                    Style="{StaticResource btn}"
+                    Command="{Binding IncreaseCommandForDev02Temp}"/>
+
+                <Button
+                    Text="Enter"
+                    Style="{StaticResource btn}"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
