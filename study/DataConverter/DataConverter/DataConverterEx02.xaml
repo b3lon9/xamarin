@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataConverter.DataConverterEx02"
+             xmlns:local="clr-namespace:DataConverter">
+    <StackLayout
+        Padding="20"
+        Spacing="20"
+        Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Subscribe?" />
+            <Switch x:Name="switch1" />
+            <!--<Label Text="label" Padding="10" TextColor="#ff0000" />-->
+            <!--원래는 계층구조로 이루어져 있음-->
+            <Label>
+                <Label.Text>
+                    <Binding 
+                        Source="{x:Reference switch1}"
+                        Path="IsToggled">
+                        <!--Converter:Text-->
+                        <Binding.Converter>
+                            <local:BoolToGenericConverter
+                                x:TypeArguments="x:String" 
+                                TrueObject="Of Course"
+                                FalseObject="No Way!" />
+                        </Binding.Converter>
+                    </Binding>
+                </Label.Text>
+            </Label>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Allow popups?" />
+            <Switch x:Name="switch2" />
+            <Label>
+                <Label.Text>
+                    <Binding 
+                        Source="{x:Reference switch2}"
+                        Path="IsToggled">
+                        <!--Converter:Text-->
+                        <Binding.Converter>
+                            <local:BoolToGenericConverter
+                                x:TypeArguments="x:String" 
+                                TrueObject="Yes"
+                                FalseObject="No" />
+                        </Binding.Converter>
+                    </Binding>
+                </Label.Text>
+            </Label>
+        </StackLayout>
+
+        <StackLayout>
+            <StackLayout 
+                Orientation="Horizontal"
+                HorizontalOptions="End">
+                <Label
+                    Text="Night Mode"
+                    FontSize="17" />
+                <Switch x:Name="switchDayNight" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label 
+                    Padding="15"
+                    Text="Data bindings usually transfer data from a source property to a target property, and in some cases from the" >
+                    <Label.TextColor>
+                        <Binding Source="{x:Reference switchDayNight}" Path="IsToggled" >
+                            <Binding.Converter>
+                                <local:BoolToGenericConverter x:TypeArguments="Color" TrueObject="#fff" FalseObject="#000" />
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.TextColor>
+                    <Label.BackgroundColor>
+                        <Binding Source="{x:Reference switchDayNight}" Path="IsToggled" >
+                            <Binding.Converter>
+                                <local:BoolToGenericConverter x:TypeArguments="Color" TrueObject="#000" FalseObject="#fff" />
+                            </Binding.Converter>
+                        </Binding>
+                    </Label.BackgroundColor>
+                </Label>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
