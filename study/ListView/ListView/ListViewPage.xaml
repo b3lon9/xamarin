@@ -4,7 +4,9 @@
              x:Class="ListView.ListViewPage">
     <ContentPage.Content>
         <StackLayout>
-            <ListView>
+            <ListView 
+                ItemTapped="ListView_ItemTapped"
+                ItemSelected="ListView_ItemSelected">
                 <ListView.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>"c"</x:String>
